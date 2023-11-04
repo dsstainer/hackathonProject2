@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+button{
+    background-color: #58cc02;
+    box-shadow: 0 15px 0 #58a700;
+    border-radius: 50px;
+    padding: 100px 200px;
+    color: #f0f0f0;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:active{
+    box-shadow: none;
+    transform: translateY(5px);
+    border-radius: 50px;
+}
+

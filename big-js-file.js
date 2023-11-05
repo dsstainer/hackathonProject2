@@ -12,7 +12,6 @@ const driver = () => {
         const leftmost_position = Math.trunc(Math.random()*(screen.width-width));
         const topmost_position = Math.trunc(Math.random()*(screen.height-height));
         const popupWindow = window.open("popupWindow.html", "", `width=${width},height=${height},left=${leftmost_position},top=${topmost_position},popup=true`);
-        popupWindow.addEventListener("beforeunload", duplicate_window)
         windowArray.push(popupWindow)
         window.location.href = "finish.html"
     };
@@ -46,7 +45,7 @@ const driver = () => {
             windowArray.forEach((element)=>{
                 element.removeEventListener('beforeunload', duplicate_window)
                 element.close()
-                window.document.href = 'score.html'
+                window.location.href = 'score.html'
             })
         }
     finish_button.addEventListener("click", finish_game)

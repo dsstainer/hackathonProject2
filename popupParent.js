@@ -2,6 +2,10 @@ const driver = () => {
     console.log("Parent Driver Function Activated")
     const button = document.getElementById("popup")
     const popup_window = () => {
+        // hide start button and show finish button
+        document.getElementById('popup').style.visibility = 'hidden';
+        document.getElementById('finish_button').style.visibility = 'visible';
+
         console.log("Parent Popup Window Function Activated")
         const minWidth = 100;
         const minHeight = 100;
@@ -21,9 +25,6 @@ const driver = () => {
         const popupWindow = window.open("popupWindow.html", "", `width=${width},height=${height},left=${leftmost_position},top=${topmost_position},popup=true`);
         //serialise and send this popupWindow info as JSON
         //console.log("String passed into Window.open: " + `width=${width},height=${height},left=${leftmost_position},top=${topmost_position}`)
-
-        window.location.href = "finish.html"
-        
         
     };
     

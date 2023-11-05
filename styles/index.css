@@ -22,7 +22,7 @@ body {
     font-style: normal;
     text-transform: uppercase; 
     letter-spacing: 1px;
-    cursor: pointer;
+    cursor: pointer; 
     transition: all 0.3s ease;
 }
 
@@ -59,4 +59,13 @@ body {
     box-shadow: none;
     transform: translateY(5px);
     border-radius: 50px;
+}
+
+.close{
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
 }

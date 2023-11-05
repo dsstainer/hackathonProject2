@@ -1,6 +1,38 @@
+const video = document.getElementById('video')
+const canvas = document.getElementById('canvas')
+const popup = document.getElementById('popup')
+
+const constraints = {
+    audio: true,
+    video: {
+        width: { min: 1024, ideal: 1280, max: 1920 },
+        height: { min: 576, ideal: 720, max: 1080 }
+    }
+}
+
+async function startWebCam() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        video.srcObject = stream;
+        window.stream = stream;
+    } catch (e) {
+        console.log(e.toString());
+    }
+}
+
+var context = canvas.getContext('2d');
+
+popup.addEventListener('click', () => {
+    context.drawImage(video, 0, 0, 640, 480);
+})
+
+startWebCam()
+
 const driver = () => {
     console.log("Driver Function Activated")
     const button = document.getElementById("popup")
+    
+    
     const popup_window = () => {
         console.log("Popup Window Function Activated")
         const minWidth = 100;
@@ -28,7 +60,7 @@ const driver = () => {
     
     const duplicate_window = (event) => {
         popup_window();
-        popup_window();
+        popup_window(); 
         event.currentTarget.close();
     }
     button.addEventListener("click", popup_window)

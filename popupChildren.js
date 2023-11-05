@@ -1,11 +1,8 @@
 
 const driver = () => {
     console.log("Child Driver Function Activated")
-    let count = 0;
-    
     const duplicate_window = (event) => {
         console.log("Child Duplicate Window Function Activated")
-        count = count + 1;
         const minWidth = 100;
         const minHeight = 100;
         const maxWidth = 400;
@@ -27,9 +24,8 @@ const driver = () => {
         const leftmost_position2 = Math.trunc(Math.random()*(screen.width-width));
         const topmost_position2 = Math.trunc(Math.random()*(screen.height-height));
         const popupWindow2 = window.open(htmlFilePath, "", `width=${width2},height=${height2},left=${leftmost_position2},top=${topmost_position2},popup=true`);
-        console.log("popupWindow : ", popupWindow );
+        console.log("popupWindow : ", popupWindow);
         console.log("popupWindow2: ", popupWindow2);
-        console.log("Count: ",count);
         //event.currentTarget.close();
     }
     console.log("Window: ", window)

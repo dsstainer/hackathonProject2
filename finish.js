@@ -3,7 +3,7 @@ const driver = () => {
     console.log("Finishing sequence activated")
     const button = document.getElementById("finish_button")
     const finish_game = () => {
-
+        
         /*const windowArray = .getAll({
             windowTypes: ['popup']
         })

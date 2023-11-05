@@ -17,12 +17,13 @@ const driver = () => {
         console.log("Leftmost position: " + leftmost_position)
         console.log("Topmost position: " + topmost_position)
         */
-        const popupWindow = window.open("popupWindow.html", "", `width=${width},height=${height},left=${leftmost_position},top=${topmost_position},popup=true`);
         
+        const popupWindow = window.open("popupWindow.html", "", `width=${width},height=${height},left=${leftmost_position},top=${topmost_position},popup=true`);
+        //serialise and send this popupWindow info as JSON
         //console.log("String passed into Window.open: " + `width=${width},height=${height},left=${leftmost_position},top=${topmost_position}`)
 
         window.location.href = "finish.html"
-
+        
         
     };
     

@@ -9,8 +9,8 @@ const driver = () => {
         const maxHeight = 400;
         const width = Math.trunc(Math.random()*(maxWidth - minWidth)) + minWidth;
         const height = Math.trunc(Math.random()*(maxHeight - minHeight)) + minHeight;
-        const leftmost_position = Math.trunc(Math.random()*(window.innerWidth-width));
-        const topmost_position = Math.trunc(Math.random()*(window.innerHeight-height));
+        const leftmost_position = Math.trunc(Math.random()*(screen.width-width));
+        const topmost_position = Math.trunc(Math.random()*(screen.height-height));
         /*
         console.log("window.width: " + window.innerWidth)
         console.log("window.height: " + window.innerHeight)
@@ -20,12 +20,10 @@ const driver = () => {
         const popupWindow = window.open("popupWindow.html", "", `width=${width},height=${height},left=${leftmost_position},top=${topmost_position},popup=true`);
         
         //console.log("String passed into Window.open: " + `width=${width},height=${height},left=${leftmost_position},top=${topmost_position}`)
-        /*
-        if window.location.href = <old url>:
-            window.location.href = "<new url name>"
-        otherwise,
-            do nothing
-        */
+
+        window.location.href = "finish.html"
+
+        
     };
     
     button.addEventListener("click", popup_window)
